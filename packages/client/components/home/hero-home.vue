@@ -40,10 +40,10 @@
           <!-- {/* Section header */} -->
           <div class="text-center pb-12 md:pb-16">
             <h1 class="text-4xl font-extrabold leading-tighter tracking-tighter mb-4">
-              <span>ShopFlex</span>
-              <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-400"
+              <span>Ecommerce Automation</span>
+              <!-- <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-teal-400"
                 >Automation</span
-              >
+              > -->
             </h1>
             <div class="max-w-5xl mx-auto">
               <p class="text-xl text-gray-600 mb-8">

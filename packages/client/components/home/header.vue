@@ -8,13 +8,17 @@
         <!-- {/* Site branding */} -->
         <div class="flex-shrink-0 mr-4">
           <!-- {/* Logo */} -->
-          <nuxt-link to="/" class="block" aria-label="Cruip">
-            <img
+          <nuxt-link to="/" class="font-bold flex" style="font-size: 30px;" aria-label="Cruip">
+            <span>
+              Shop
+            </span>
+            <span class="text-primary">Flex</span>
+            <!-- <img
               style="width: 32px; height: 32px;"
               class="rounded-full"
               src="/logo.png"
               alt="logo"
-            />
+            /> -->
             <!-- <svg class="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <radialGradient

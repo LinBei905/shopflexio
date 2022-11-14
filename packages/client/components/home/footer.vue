@@ -5,24 +5,30 @@
   >
     <div class="flex items-center flex-col gap-2 sm:flex-row sm:justify-between">
       <div class="left">
-        <p class="gray">Contact Us: support@shopflex.io</p>
         <p class="gray">
-          ShopFlex @2021.
+          Contact Us:
+          <a class="underline" href="mailto:support@shopflex.io">
+            support@shopflex.io
+          </a>
+        </p>
+        <p class="gray">
           <a class="gray link" href="https://www.shopflex.io/privacy_policy">
-            Privacy Police
+            ShopFlex &copy;{{ currentYear }}. Privacy Police
           </a>
         </p>
       </div>
 
       <div class="right flex items-center gap-2">
-        <img style="width: 16px; height: 16px;" src="/footer-logo.png" />
+        <img class="rounded-full" style="width: 24px; height: 24px;" src="/logo.png" />
         <h4 class="font-semibold">Hope you get what you want here!</h4>
       </div>
     </div>
   </footer>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const currentYear = new Date().getFullYear()
+</script>
 
 <style scoped lang="scss">
 footer {
