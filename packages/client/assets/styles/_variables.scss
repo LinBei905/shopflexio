@@ -1,0 +1,48 @@
+:root {
+  // font size
+  --vt-fs-xs: 12px;
+  --vt-fs-sm: 14px;
+  --vt-fs-base: 16px;
+  --vt-fs-lg: 18px;
+  --vt-line-height: 1.5;
+
+  // extra light
+  --vt-fw-extralight: 200;
+  --vt-fw-light: 300;
+  --vt-fw-normal: 400;
+  --vt-fw-medium: 500;
+  --vt-fw-semibold: 600;
+  --vt-fw-bold: 700;
+  --vt-fw-extrabold: 800;
+
+  // color
+  // --vt-c-primary-base: #fc7234;
+  --vt-c-primary: #286df8;
+  --vt-c-secondary: #dbecff;
+  // --vt-c-accent: hsla(var(--c) / var(--tw-bg-opacity, 1));
+
+  // spacing
+  --vt-s-2xs: 4px;
+  --vt-s-xs: 8px;
+  --vt-s-sm: 16px;
+  --vt-s-base: 24px;
+  --vt-s-lg: 32px;
+  --vt-s-xl: 40px;
+  --vt-s-2xl: 80px;
+  --vt-s-3xl: 160px;
+
+  // font family
+  --vt-ff-primary: 'Roboto', serif, sans-serif, Arial, -apple-sysmtem;
+  --vt-ff-secondary: 'Raleway', sans-serif, -apple-system;
+
+  --vt-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --vt-ring-inset: var(--vt-empty, /*!*/ /*!*/);
+  --vt-ring-offset-width: 0px;
+  --vt-ring-offset-color: #fff;
+  --vt-ring-color: rgba(59, 130, 246, 0.5);
+  --vt-ring-offset-shadow: 0 0 #0000;
+  --vt-ring-shadow: 0 0 #0000;
+
+  // border
+  --vt-c-border-gray: #eeeeee;
+}

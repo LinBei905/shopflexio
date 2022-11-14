@@ -1,0 +1,15 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1,
+    "workspacePrefix": "D:\\markdown_notebook\\work\\shopflex-automation"
+  },
+  "1 error pnpm": {
+    "code": "ERR_PNPM_NO_SCRIPT",
+    "err": {
+      "name": "pnpm",
+      "message": "Missing script: release",
+      "code": "ERR_PNPM_NO_SCRIPT",
+      "stack": "pnpm: Missing script: release\n    at Object.handler (C:\\Users\\htwoo\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:177778:15)\n    at async C:\\Users\\htwoo\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:182016:21\n    at async run (C:\\Users\\htwoo\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:181990:34)\n    at async runPnpm (C:\\Users\\htwoo\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:182209:5)\n    at async C:\\Users\\htwoo\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:182201:7"
+    }
+  }
+}

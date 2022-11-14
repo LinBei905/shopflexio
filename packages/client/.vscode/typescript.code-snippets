@@ -1,0 +1,18 @@
+{
+  "cm:ti": {
+    "prefix": "cm:ti",
+    "body": "// @ts-ignore"
+  },
+  "cm:api": {
+    "prefix": "cm:api",
+    "body": "// ========================== API ======================"
+  },
+  "cm:feat": {
+    "prefix": "cm:feat",
+    "body": [
+      "/***************************************",
+      "* New feature: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+      "***************************************/"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "i18n-ally.localesPaths": ["packages/client/lang"],
+  "cSpell.words": ["Nuxt"]
+}

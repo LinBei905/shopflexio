@@ -1,0 +1,11 @@
+version: '3.2' # optional since v1.27.0
+services:
+  redis:
+    container_name: 'mysql-demo'
+    image: mysql:5.7
+    ports:
+      - '3306:3306'
+    volumes:
+      - $PWD/mysqldata:/data
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql

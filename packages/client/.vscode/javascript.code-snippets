@@ -1,0 +1,14 @@
+{
+  "script:executeJs": {
+    "prefix": "script:executeJs",
+    "body": [
+      "/**",
+      "* ES5 - only",
+      "* @param { { flowBlocks: {[key: string]: { inputs: any, outputs: any }} } } context",
+      "*/",
+      "function executeJs(context) {",
+      "\t",
+      "}",
+    ]
+  }
+}

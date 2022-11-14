@@ -1,0 +1,33 @@
+{
+  "name": "shopflex-automation",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "release": "standard-version",
+    "dev": "cd packages/client && pnpm dev",
+    "start": "cd packages/client && pnpm start",
+    "build": "cd packages/client && pnpm build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jquery": "^3.5.14",
+    "execa": "^6.1.0",
+    "fs-extra": "^10.1.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.2",
+    "npm-run-all": "^4.1.5",
+    "pretty-quick": "^3.1.3",
+    "standard-version": "^9.5.0",
+    "typescript": "^4.7.3"
+  },
+  "lint-staged": {
+    "./**/*.{js,ts,vue}": [
+      "prettier --write .",
+      "git add"
+    ]
+  }
+}
