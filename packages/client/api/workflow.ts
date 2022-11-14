@@ -7,12 +7,13 @@ import { clearVoidKey, isNumber, parse } from '../shared'
 import { get } from './_request'
 
 export async function getPublishedWorkflows(params: any = {}) {
-  const { pageNum = 1, pageSize = 12, platform } = params
+  const { pageNum = 1, pageSize = 12, platform, tags = '' } = params
 
   return getWorkflows({
     pageNum,
     pageSize,
     platform,
+    tags,
     // @ts-ignore
     published: true,
   })
