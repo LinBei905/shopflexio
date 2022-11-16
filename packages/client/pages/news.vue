@@ -11,6 +11,7 @@
 
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
+
 import News from '~/components/News.vue'
 export default defineComponent({
   name: 'NewsPage',

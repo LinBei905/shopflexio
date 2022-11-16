@@ -55,6 +55,7 @@
     "slate-vue": "^0.2.0",
     "vue-click-outside": "^1.1.0",
     "vue-marquee-text-component": "1.2.0",
+    "vue-quill-editor": "^3.0.6",
     "vue-virtual-table": "^0.2.22",
     "vue2-animate": "^2.1.4"
   },

@@ -9,7 +9,7 @@
         <p class="gray">
           ShopFlex @2021.
           <a class="gray link" href="https://www.shopflex.io/privacy_policy">
-            Privacy Police
+            Privacy Policy
           </a>
         </p>
       </div>

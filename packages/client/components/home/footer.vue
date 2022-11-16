@@ -13,7 +13,7 @@
         </p>
         <p class="gray">
           <a class="gray link" href="https://www.shopflex.io/privacy_policy">
-            ShopFlex &copy;{{ currentYear }}. Privacy Police
+            ShopFlex &copy;{{ currentYear }}. Privacy Policy
           </a>
         </p>
       </div>

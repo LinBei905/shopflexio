@@ -43,6 +43,8 @@ const nuxtConfig: NuxtConfig = {
   plugins: [
     { src: '~plugins/element-ui', ssr: true },
     { src: '~plugins/components.client', ssr: false },
+    { src: '~plugins/quill.client', ssr: false },
+    { src: '~plugins/quill-editor.client', ssr: false },
     { src: '~plugins/aos.client', ssr: false },
   ],
   /** Nuxt.js dev-modules */
@@ -56,7 +58,7 @@ const nuxtConfig: NuxtConfig = {
     '@nuxtjs/tailwindcss',
   ],
   router: {
-    base: '/'
+    base: '/',
   },
   /** Nuxt.js modules */
   modules: ['@nuxtjs/i18n'],

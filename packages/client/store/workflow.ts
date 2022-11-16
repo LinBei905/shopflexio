@@ -3,9 +3,9 @@ import { ActionHandler } from 'vuex'
 
 import {
   getBlocks,
+  getPlatformsOrIntegrations,
   getPublishedWorkflows,
   getPublishedWorkflowTags,
-  getPlatformsOrIntegrations,
 } from '../api'
 
 export const state = () => {

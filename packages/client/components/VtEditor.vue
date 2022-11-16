@@ -34,7 +34,7 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, ref } from '@nuxtjs/composition-api'
-import VueEditor from './editor/VueEditor.vue'
+import VueEditor from './editor/VueQuillEditor.vue'
 
 function getInitData() {
   return {
