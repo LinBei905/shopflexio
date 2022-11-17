@@ -76,7 +76,6 @@
             <div class="relative flex justify-center mb-8">
               <div class="flex flex-col justify-center rounded-lg overflow-hidden">
                 <el-image
-                  lazy
                   class="mx-auto"
                   style="max-width: 680px;"
                   src="/banner.png"

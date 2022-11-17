@@ -22,7 +22,6 @@
         v-if="currentBlog.cover"
         class="w-full"
         :src="currentBlog.cover"
-        lazy
         :alt="currentBlog.title"
       ></el-image>
 

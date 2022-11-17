@@ -87,6 +87,7 @@ export default defineComponent({
   },
   computed: {
     isSticky() {
+      // @ts-ignore
       return this.scrollY > 10
     },
   },
