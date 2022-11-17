@@ -1,6 +1,6 @@
-import Vue from 'vue'
+// import Vue from 'vue'
 
 // @ts-ignore
-import QuillEditor from '~/components/editor/VueQuillEditor.vue'
+// import QuillEditor from '~/components/editor/VueQuillEditor.vue'
 
-Vue.component('VueQuillEditor', QuillEditor)
+// Vue.component('VueQuillEditor', QuillEditor)

@@ -10,7 +10,7 @@
     "yarn": "^1.22.4"
   },
   "scripts": {
-    "dev": "nuxt",
+    "dev": "node --max-old-space-size=2048 node_modules/nuxt/bin/nuxt.js",
     "build": "nuxt build",
     "analyze": "nuxt build -a",
     "start": "nuxt start",

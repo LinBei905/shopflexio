@@ -43,11 +43,12 @@
         <nav class="flex flex-grow">
           <ul class="flex flex-grow justify-end flex-wrap items-center">
             <li>
-              <!-- <nuxt-link
-                to="/signin"
-                class="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                >Sign in</nuxt-link
-              > -->
+              <nuxt-link
+                to="/blogs"
+                class="font-medium text-gray-900 hover:text-primary px-5 py-3 flex items-center transition duration-150 ease-in-out"
+              >
+                Blogs
+              </nuxt-link>
             </li>
             <li>
               <a

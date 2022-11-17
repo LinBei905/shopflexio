@@ -36,7 +36,7 @@
 
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <!-- {/* Hero content */} -->
-        <div class="pt-32 pb-12 md:pt-40 md:pb-20">
+        <div class="pt-16 pb-12">
           <!-- {/* Section header */} -->
           <div class="text-center pb-12 md:pb-16">
             <h1 class="text-4xl font-extrabold leading-tighter tracking-tighter mb-4">
