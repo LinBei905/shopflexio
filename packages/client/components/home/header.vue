@@ -42,14 +42,14 @@
         <!-- {/* Site navigation */} -->
         <nav class="flex flex-grow">
           <ul class="flex flex-grow justify-end flex-wrap items-center">
-            <li>
+            <!-- <li>
               <nuxt-link
                 to="/blogs"
                 class="font-medium text-gray-900 hover:text-primary px-5 py-3 flex items-center transition duration-150 ease-in-out"
               >
                 Blogs
               </nuxt-link>
-            </li>
+            </li> -->
             <li>
               <a
                 href="https://ap.shopflex.io/account/login"
