@@ -14,7 +14,7 @@
     "build": "nuxt build",
     "analyze": "nuxt build -a",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "node --max-old-space-size=2048 node_modules/nuxt/bin/nuxt.js generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "fix": "run-p \"lint:eslint --fix\" \"lint:prettier --write\"",
     "lint": "run-p lint:*",
