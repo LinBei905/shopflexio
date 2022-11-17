@@ -20,7 +20,6 @@ import { nanoid } from 'nanoid'
 
 const emailRE = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 export const isEmail = (val: string) => emailRE.test(val)
-export { default as omit } from 'lodash.omit'
 
 export const isVoid = (v: unknown) => v === null || v === undefined || v === ''
 export const isUndef = (v: unknown): v is undefined | null => v == null
