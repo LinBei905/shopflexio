@@ -1,3 +1,5 @@
+import promiseCache from 'promise-memoize'
+
 import { get, http } from './_request'
 
 export async function getSupportedPlatform() {
@@ -26,3 +28,8 @@ export function getDataFromKeyValueStore(key: string, defaultVal: object | Array
 
 export const getUseCasesSteps = () =>
   getDataFromKeyValueStore('AP__USE_CASES__V1').then((res) => res?.steps || [])
+
+const _getBlogData = () => getDataFromKeyValueStore(`IO_BLOG_V1`)
+export const getBlogData = promiseCache(_getBlogData, {
+  maxAge: 60 * 1000,
+})

@@ -3,7 +3,7 @@
     class="fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out"
     :class="isSticky ? 'bg-white backdrop-blur-sm shadow-lg' : ''"
   >
-    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+    <div class="max-w-6xl mx-auto">
       <div class="flex items-center justify-between h-16 md:h-20">
         <!-- {/* Site branding */} -->
         <div class="flex-shrink-0 mr-4">
