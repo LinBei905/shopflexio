@@ -1,16 +1,16 @@
-import {
-  camelCase,
-  capitalCase,
-  constantCase,
-  dotCase,
-  headerCase,
-  noCase,
-  paramCase,
-  pascalCase,
-  pathCase,
-  sentenceCase,
-  snakeCase,
-} from 'change-case'
+// import {
+//   camelCase,
+//   capitalCase,
+//   constantCase,
+//   dotCase,
+//   headerCase,
+//   noCase,
+//   paramCase,
+//   pascalCase,
+//   pathCase,
+//   sentenceCase,
+//   snakeCase,
+// } from 'change-case'
 // import pickDeep from 'deepdash-es/pickDeep'
 import merge from 'lodash.merge'
 // import { isObject, isString } from 'lodash'
@@ -128,62 +128,62 @@ type TextCase =
   | 'sentenceCase'
   | 'snakeCase'
 
-/**
- * @param { string } text
- * @param { import('@/@types').TextCase | import('@/@types').TextCase[]} type
- */
-export function changeCase(text, type: TextCase | TextCase[]): string {
-  if (!type || !isString(text)) return text
-  type = Array.isArray(type) ? type : [type]
-  return type.reduce((prev, curr) => _changeCase(prev, curr), text)
-}
+// /**
+//  * @param { string } text
+//  * @param { import('@/@types').TextCase | import('@/@types').TextCase[]} type
+//  */
+// export function changeCase(text, type: TextCase | TextCase[]): string {
+//   if (!type || !isString(text)) return text
+//   type = Array.isArray(type) ? type : [type]
+//   return type.reduce((prev, curr) => _changeCase(prev, curr), text)
+// }
 
-function _changeCase(text, type = '') {
-  let method = (a) => a
-  switch (type) {
-    case 'camelCase':
-      method = camelCase
-      break
-    case 'capitalCase':
-      method = capitalCase
-      break
-    case 'constantCase':
-      method = constantCase
-      break
-    case 'dotCase':
-      method = dotCase
-      break
-    case 'headerCase':
-      method = headerCase
-      break
-    case 'noCase':
-      method = noCase
-      break
-    case 'paramCase':
-      method = paramCase
-      break
-    case 'pascalCase':
-      method = pascalCase
-      break
-    case 'pathCase':
-      method = pathCase
-      break
-    case 'sentenceCase':
-      method = sentenceCase
-      break
-    case 'snakeCase':
-      method = snakeCase
-      break
-    case 'upperCase':
-      method = (t) => t.toUpperCase()
-      break
-    case 'lowerCase':
-      method = (t) => t.toLowerCase()
-      break
-  }
+// function _changeCase(text, type = '') {
+//   let method = (a) => a
+//   switch (type) {
+//     case 'camelCase':
+//       method = camelCase
+//       break
+//     case 'capitalCase':
+//       method = capitalCase
+//       break
+//     case 'constantCase':
+//       method = constantCase
+//       break
+//     case 'dotCase':
+//       method = dotCase
+//       break
+//     case 'headerCase':
+//       method = headerCase
+//       break
+//     case 'noCase':
+//       method = noCase
+//       break
+//     case 'paramCase':
+//       method = paramCase
+//       break
+//     case 'pascalCase':
+//       method = pascalCase
+//       break
+//     case 'pathCase':
+//       method = pathCase
+//       break
+//     case 'sentenceCase':
+//       method = sentenceCase
+//       break
+//     case 'snakeCase':
+//       method = snakeCase
+//       break
+//     case 'upperCase':
+//       method = (t) => t.toUpperCase()
+//       break
+//     case 'lowerCase':
+//       method = (t) => t.toLowerCase()
+//       break
+//   }
 
-  return method(text)
-}
+//   return method(text)
+// }
 
 export function toJsonString(data: any, fallbackValue = ''): string {
   try {
