@@ -5,7 +5,7 @@
         <h1 class="font-bold text-4xl">
           {{ currentBlog.title }}
         </h1>
-        <div class="tags mt-3 flex gap-2">
+        <div v-if="currentBlog.tags && currentBlog.length" class="tags mt-3 flex gap-2">
           <div
             v-for="tag in currentBlog.tags"
             :key="tag"
@@ -18,7 +18,13 @@
           </div>
         </div>
       </header>
-      <el-image class="w-full" :src="currentBlog.cover" lazy :alt="currentBlog.title"></el-image>
+      <el-image
+        v-if="currentBlog.cover"
+        class="w-full"
+        :src="currentBlog.cover"
+        lazy
+        :alt="currentBlog.title"
+      ></el-image>
 
       <section class="mt-6 mb-8">
         <div class="ql-container ql-snow" style="border: none;">
