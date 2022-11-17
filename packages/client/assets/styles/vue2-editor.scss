@@ -1,6 +1,13 @@
 .ql-editor {
+  font-family: 'Roboto', serif, sans-serif, Arial, -apple-sysmtem;
   min-height: 200px;
   font-size: 16px;
+}
+
+.ql-align-center {
+  > * {
+    margin: auto;
+  }
 }
 
 .ql-snow .ql-stroke.ql-thin,
@@ -25,8 +32,8 @@
   height: 22px;
 }
 
-.quillWrapper .ql-editor ul[data-checked=false] > li::before,
-.quillWrapper .ql-editor ul[data-checked=true] > li::before {
+.quillWrapper .ql-editor ul[data-checked='false'] > li::before,
+.quillWrapper .ql-editor ul[data-checked='true'] > li::before {
   font-size: 1.35em;
   vertical-align: baseline;
   bottom: -0.065em;

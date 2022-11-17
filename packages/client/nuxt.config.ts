@@ -11,7 +11,7 @@ config()
 const basePath = process.env.BASE_PATH || '/'
 const nuxtConfig: NuxtConfig = {
   ssr: true,
-  target: 'static',
+  target: 'server',
   server: {
     host: process.env.NODE_ENV === 'production' ? '0.0.0.0' : 'localhost',
     port: 8003,
@@ -117,6 +117,8 @@ const nuxtConfig: NuxtConfig = {
   /* eslint-enable no-process-env */
   /** Build configuration */
   build: {
+    standalone: true,
+
     plugins: [
       new webpack.ProvidePlugin({
         // global modules

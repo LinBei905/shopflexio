@@ -12,6 +12,7 @@
 
 @import 'tailwindcss/utilities';
 @import './editor';
+@import './vue2-editor.scss';
 
 /* See Alpine.js: https://github.com/alpinejs/alpine#x-cloak */
 [x-cloak=''] {

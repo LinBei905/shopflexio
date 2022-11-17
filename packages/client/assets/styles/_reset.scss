@@ -86,6 +86,9 @@ button {
     color: #ffffff;
   }
 }
+html {
+  font-family: 'Roboto', serif, sans-serif, Arial, -apple-sysmtem;
+}
 
 input::selection {
   background: var(--vt-c-primary, #286df8);

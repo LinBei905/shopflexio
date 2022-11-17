@@ -1,23 +1,19 @@
 <template>
-  <div class="demo1">
+  <div class="blog-editor">
     <blog-editor />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
 
 import BlogEditor from '~/components/blog-editor/BlogEditor.vue'
+import { useNamespace } from '~/composables'
 
 export default defineComponent({
-  name: 'Demo1',
-  components: { BlogEditor },
+  name: 'BlogEditor',
   setup() {
-    const content = ref('')
-
-    return {
-      content,
-    }
+    return {}
   },
 })
 </script>
