@@ -44,7 +44,7 @@ const nuxtConfig: NuxtConfig = {
     { src: '~plugins/element-ui', ssr: true },
     { src: '~plugins/components.client', ssr: false },
     { src: '~plugins/quill.client', ssr: false },
-    { src: '~plugins/quill-editor.client', ssr: false },
+    // { src: '~plugins/quill-editor.client', ssr: false },
     { src: '~plugins/aos.client', ssr: false },
   ],
   /** Nuxt.js dev-modules */
@@ -120,11 +120,11 @@ const nuxtConfig: NuxtConfig = {
     standalone: true,
 
     plugins: [
-      new webpack.ProvidePlugin({
-        // global modules
-        'window.Quill': 'quill/dist/quill.js',
-        Quill: 'quill/dist/quill.js',
-      }),
+      // new webpack.ProvidePlugin({
+      //   // global modules
+      //   'window.Quill': 'quill/dist/quill.js',
+      //   Quill: 'quill/dist/quill.js',
+      // }),
     ],
     transpile: ['slate-vue', 'vue-tsx-support'],
 
