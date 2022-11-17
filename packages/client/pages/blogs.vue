@@ -1,9 +1,9 @@
 <template>
-  <div class="blogs-page mt-4">
-    <article class="grid grid-cols-3 gap-10 max-w-6xl m-auto">
+  <div class="blogs-page mt-4 px-4 lg:px-0">
+    <article class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 max-w-6xl m-auto">
       <nuxt-link v-for="item in formattedList" :key="item.id" :to="`/blog/${item.id}`">
         <article>
-          <el-image lazy :src="item.cover" :alt="item.title" />
+          <el-image style="min-height: 300px;" lazy :src="item.cover" :alt="item.title" />
           <div class="tags mt-3 mb-4 flex gap-2">
             <div
               v-for="tag in item.tags"

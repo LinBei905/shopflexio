@@ -5,7 +5,7 @@
         <h1 class="font-bold text-4xl">
           {{ currentBlog.title }}
         </h1>
-        <div v-if="currentBlog.tags && currentBlog.length" class="tags mt-3 flex gap-2">
+        <div v-if="currentBlog.tags && currentBlog.tags.length" class="tags mt-3 flex gap-2">
           <div
             v-for="tag in currentBlog.tags"
             :key="tag"
