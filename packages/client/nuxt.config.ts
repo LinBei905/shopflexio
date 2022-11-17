@@ -11,7 +11,7 @@ config()
 const basePath = process.env.BASE_PATH || '/'
 const nuxtConfig: NuxtConfig = {
   ssr: true,
-  target: 'server',
+  target: 'static',
   server: {
     host: process.env.NODE_ENV === 'production' ? '0.0.0.0' : 'localhost',
     port: 8003,
