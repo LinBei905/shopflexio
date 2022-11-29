@@ -34,7 +34,7 @@
         </svg> -->
       </div>
 
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="max-w-6xl mx-auto px-4">
         <!-- {/* Hero content */} -->
         <div class="pt-16 pb-12">
           <!-- {/* Section header */} -->
@@ -45,7 +45,7 @@
                 >Automation</span
               > -->
             </h1>
-            <div class="max-w-5xl mx-auto">
+            <div class="max-w-6xl mx-auto">
               <p class="text-xl text-gray-600 mb-8">
                 ShopFlex Automation, is an e-commerce automation tool that enables you to automate
                 tasks and processes within your store and across your apps. It is like Shopify Flow
@@ -75,12 +75,7 @@
           <div>
             <div class="relative flex justify-center mb-8">
               <div class="flex flex-col justify-center rounded-lg overflow-hidden">
-                <el-image
-                  class="mx-auto"
-                  style="max-width: 680px;"
-                  src="/banner.png"
-                  alt="Hero"
-                />
+                <el-image class="mx-auto" style="max-width: 680px;" src="/banner.png" alt="Hero" />
                 <!-- <svg
                   class="absolute inset-0 max-w-full mx-auto md:max-w-none h-auto"
                   width="768"
