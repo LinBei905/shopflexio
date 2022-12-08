@@ -7,13 +7,14 @@ import { clearVoidKey, isNumber, parse } from '../shared'
 import { get } from './_request'
 
 export async function getPublishedWorkflows(params: any = {}) {
-  const { pageNum = 1, pageSize = 12, platform, tags = '' } = params
+  const { pageNum = 1, pageSize = 12, platform, tags = '', keyword = '' } = params
 
   return getWorkflows({
     pageNum,
     pageSize,
     platform,
     tags,
+    keyword,
     // @ts-ignore
     published: true,
   })
@@ -29,8 +30,9 @@ function getWorkflows(params: {
   pageSize?: number
   platform?: string
   tags?: string[]
+  keyword?: string
 }) {
-  const { pageNum = 1, pageSize = 10, platform = 'sho', tags } = params
+  const { pageNum = 1, pageSize = 10, platform = 'sho', tags, keyword } = params
   const _params = clearVoidKey({ ...params, pageNum, pageSize, platform })
 
   if (Array.isArray(tags) && tags.length) {

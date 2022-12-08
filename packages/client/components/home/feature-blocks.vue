@@ -10,7 +10,7 @@
         <div class="pm-12 md:pm-20">
           <!-- {/* Section header */} -->
           <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 class="h2 mb-4">Use Cases</h2>
+            <h2 id="use-cases" class="h2 mb-4">Use Cases1</h2>
             <p class="text-xl text-gray-600">
               Start automating a task instantly with pre-made templates
             </p>

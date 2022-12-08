@@ -13,6 +13,7 @@
     <HeroHome />
     <FeaturesBlocks />
     <Testimonial />
+    <CustomersBlock />
     <!-- <Newsletter /> -->
     <!-- </main> -->
     <!-- <TheFooter /> -->
@@ -22,6 +23,7 @@
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 
+import CustomersBlock from '../components/home/customers-block.vue'
 import FeaturesBlocks from '../components/home/feature-blocks.vue'
 // import TheFooter from '../components/home/footer.vue'
 // import TheHeader from '../components/home/header.vue'
@@ -33,6 +35,7 @@ export default defineComponent({
   components: {
     // TheHeader,
     HeroHome,
+    CustomersBlock,
     FeaturesBlocks,
     Testimonial,
     // TheFooter,

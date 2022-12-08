@@ -73,7 +73,7 @@
             layout="total, sizes, prev, pager, next"
             :current-page="workflowListState.pageNum"
             :page-size="workflowListState.pageSize"
-            :page-sizes="[12, 24, 36]"
+            :page-sizes="[2, 12, 24, 36]"
             :total="workflowListState.total"
             :disabled="isLoading"
             @size-change="handleSizeChange"

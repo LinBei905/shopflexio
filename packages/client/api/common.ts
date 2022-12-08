@@ -26,6 +26,14 @@ export function getDataFromKeyValueStore(key: string, defaultVal: object | Array
   })
 }
 
+export function sendBookRequest(params: {
+  email: string
+  phone?: string
+  question?: string
+}) {
+  return http.post(`/auth/common/question`, params)
+}
+
 export const getUseCasesSteps = () =>
   getDataFromKeyValueStore('AP__USE_CASES__V1').then((res) => res?.steps || [])
 

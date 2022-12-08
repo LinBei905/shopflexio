@@ -29,5 +29,8 @@
       "prettier --write .",
       "git add"
     ]
+  },
+  "dependencies": {
+    "pnpm": "^7.18.1"
   }
 }

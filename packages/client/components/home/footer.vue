@@ -18,6 +18,18 @@
         </p>
       </div>
 
+      <div class="center flex items-center gap-2">
+        <!-- <a href="https://twitter.com/ShopFlexApp" target="_blank">
+          <img class="social-icon" src="../../assets/icons/twitter.svg" alt="" width="25px" height="25px">
+        </a> -->
+        <a href="https://www.linkedin.com/company/shopflex/" target="_blank">
+          <img class="social-icon" src="../../assets/icons/linkedin-fill.svg" alt="" width="25px" height="25px">
+        </a>
+        <a href="https://www.youtube.com/channel/UCbRav4l3M30l3p8hhBPz5VQ" target="_blank">
+          <img class="social-icon" src="../../assets/icons/Youtube.svg" alt="" width="25px" height="25px">
+        </a>
+      </div>
+
       <div class="right flex items-center gap-2">
         <img class="rounded-full" style="width: 24px; height: 24px;" src="/logo.png" />
         <h4 class="font-semibold">Hope you get what you want here!</h4>
@@ -47,6 +59,9 @@ footer {
     &:hover {
       color: var(--color-primary);
     }
+  }
+  .social-icon:hover {
+    cursor: pointer;
   }
 }
 </style>

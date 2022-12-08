@@ -25,14 +25,14 @@
         <div class="py-12 md:py-20">
           <!-- {/* Section header */} -->
           <div class="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h2 class="h2 mb-4">Integrations</h2>
-            <p class="text-xl text-gray-600" data-aos="zoom-y-out">
+            <h2 class="h2 mb-4">Customers</h2>
+            <!-- <p class="text-xl text-gray-600" data-aos="zoom-y-out">
               ShopFlex is the trusted integration solution for unifying data between Shopify and
               your enterprise systems.
-            </p>
+            </p> -->
           </div>
 
-          <Integrations />
+          <Customers />
           <!-- {/* Items */} -->
         </div>
       </div>
@@ -43,12 +43,13 @@
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 
-import Integrations from '../Integrations.vue'
+import Customers from '../Customers.vue'
+
 
 export default defineComponent({
   name: 'Testimonial',
   components: {
-    Integrations
+    Customers
   },
   setup() {
     return {}

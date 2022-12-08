@@ -42,13 +42,30 @@
         <!-- {/* Site navigation */} -->
         <nav class="flex flex-grow">
           <ul class="flex flex-grow justify-end flex-wrap items-center">
-            <!-- <li>
+            <li>
               <nuxt-link
                 to="/blogs"
                 class="font-medium text-gray-900 hover:text-primary px-5 py-3 flex items-center transition duration-150 ease-in-out"
               >
                 Blogs
               </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link
+                to="/book"
+                class="font-medium text-gray-900 hover:text-primary px-5 py-3 flex items-center transition duration-150 ease-in-out"
+              >
+                Book a Demo
+              </nuxt-link>
+            </li>
+            <!-- <li>
+              <a
+                href="https://shopflex.io/blogs"
+                class="btn-sm text-white ml-3 bg-primary"
+                target="_blank"
+              >
+                <span>Blogs</span>
+              </a>
             </li> -->
             <li>
               <a
@@ -56,7 +73,7 @@
                 class="btn-sm text-white ml-3 bg-primary"
                 target="_blank"
               >
-                <span>Try it free</span>
+                <span>Try it for free</span>
                 <svg
                   class="w-3 h-3 fill-current text-white flex-shrink-0 ml-2 -mr-1"
                   viewBox="0 0 12 12"

@@ -32,7 +32,6 @@
 <script lang="ts">
 import { computed } from '@nuxtjs/composition-api'
 
-import WorkflowTable from '~/components/workflow/table.vue'
 import { useCommonStore } from '~/composables'
 
 function filterHiddenItems(list: any[]) {
@@ -66,7 +65,6 @@ function normalizeList(list: any[]) {
 export default {
   name: 'Integrations',
   components: {
-    WorkflowTable,
     VtMarquee: () => import('./VtMarquee.vue'),
   },
   setup() {
