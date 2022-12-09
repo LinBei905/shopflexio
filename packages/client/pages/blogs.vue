@@ -51,6 +51,7 @@ export default defineComponent({
       })
     })
     const formattedList = computed(() => list.value.filter((b) => b.published))
+
     return { blogData, list, formattedList }
   },
 })

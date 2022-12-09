@@ -19,13 +19,13 @@
       </div>
 
       <div class="center flex items-center gap-2">
-        <!-- <a href="https://twitter.com/ShopFlexApp" target="_blank">
+        <!-- <a href="https://twitter.com/ShopFlexApp" target="_blank" title="Twitter">
           <img class="social-icon" src="../../assets/icons/twitter.svg" alt="" width="25px" height="25px">
         </a> -->
-        <a href="https://www.linkedin.com/company/shopflex/" target="_blank">
+        <a href="https://www.linkedin.com/company/shopflex/" target="_blank" title="LinkedIn">
           <img class="social-icon" src="../../assets/icons/linkedin-fill.svg" alt="" width="25px" height="25px">
         </a>
-        <a href="https://www.youtube.com/channel/UCbRav4l3M30l3p8hhBPz5VQ" target="_blank">
+        <a href="https://www.youtube.com/channel/UCbRav4l3M30l3p8hhBPz5VQ" target="_blank" title="Youtube">
           <img class="social-icon" src="../../assets/icons/Youtube.svg" alt="" width="25px" height="25px">
         </a>
       </div>

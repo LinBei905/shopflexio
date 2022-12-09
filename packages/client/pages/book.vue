@@ -14,13 +14,20 @@
         </p>
       </div>
     </article>
-    <div class="m-auto max-w-xl">
-      <el-form ref="form" :model="form" :rules="rules" label-width="auto" label-position="top">
+    <div class="m-auto max-w-xl text-left">
+      <el-form class="book-form" ref="form" :model="form" :rules="rules" label-width="auto" label-position="top">
         <el-form-item label="Business email" prop="email">
           <el-input v-model="form.email"></el-input>
         </el-form-item>
         <el-form-item label="Phone Number" prop="phone">
-          <el-input v-model="form.phone"></el-input>
+          <el-select v-model="form.country">
+            <el-option
+              v-for="item in countryCodesJson"
+              :key="item.name"
+              :value="item.dial_code"
+              :label="item.name + ' ' + item.dial_code"></el-option>
+          </el-select>
+          <el-input v-model="form.phone" class="form-phone-number"></el-input>
         </el-form-item>
         <el-form-item label="Is there a particular use case you would like to discuss?" prop="question">
           <el-input v-model="form.question" type="textarea"></el-input>
@@ -34,21 +41,35 @@
         </el-form-item>
       </el-form>
     </div>
+    <el-dialog
+      :title="bookSuccess ? 'Success' : 'Oops!'"
+      :visible.sync="dialogVisible"
+      width="30%"
+      :before-close="handleClose">
+      <span v-if="bookSuccess">Thanks for your booking. We will reach you as soon as possible.</span>
+      <span v-if="!bookSuccess">:( Something happened. Please try again or contact us for your booking.</span>
+      <span slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="handleClose()">OK</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, useAsync } from '@nuxtjs/composition-api'
+import _ from 'lodash'
 
 import { sendBookRequest } from '~/api'
 
+import countryCodes from '../assets/data/countryCodes'
 import { validateEmail, validatePhone } from '../shared/validateEmail'
 export default defineComponent({
-  name: 'Blogs',
+  name: 'Book',
   data() {
     return {
       form: {
         email: '',
+        country: '',
         phone: '',
         question: '',
         dateTime: ''
@@ -61,24 +82,40 @@ export default defineComponent({
         phone: [
           { validator: validatePhone, trigger: 'blur'}
         ]
-      }
+      },
+      dialogVisible: false,
+      bookSuccess: true,
+      countryCodesJson: {}
     }
+  },
+  mounted() {
+    this.countryCodesJson = countryCodes
   },
   methods: {
     async submitForm() {
-      this.form.question = 'Homepage, ' + this.form.question
-      if (this.form.dateTime.length) {
-        this.form.question = this.form.question + ` 
+      const paramForm = _.cloneDeep(this.form)
+      paramForm.question = 'Homepage, ' + paramForm.question
+      if (paramForm.dateTime.length) {
+        paramForm.question = paramForm.question + ` 
           This time suits me the best: 
-        ` + this.form.dateTime
+        ` + paramForm.dateTime
+      }
+      if (paramForm.phone.length) {
+        paramForm.phone = paramForm.country + paramForm.phone
       }
       this.$refs.form.validate(async valid => {
         if (valid) {
-          // console.log(this.form)
-          const res = await sendBookRequest(this.form)
-          // if (!res) {
-
-          // }
+          // console.log(paramForm)
+          // return
+          const res = await sendBookRequest(paramForm)
+          // const res = false
+          if (!res) {
+            this.bookSuccess = true
+          }
+          else {
+            this.bookSuccess = false
+          }
+          this.bookSuccess = true
         } else {
           return false;
         }
@@ -86,10 +123,30 @@ export default defineComponent({
     },
     resetForm() {
       this.$refs.form.resetFields()
+    },
+    handleClose() {
+      if (this.bookSuccess) {
+        this.$router.push("/")
+      }
     }
   }
 })
 </script>
 
 <style lang="scss" scoped>
+</style>
+
+<style lang="scss">
+.book-form {
+  .el-select {
+    .el-input {
+      input {
+        width: 104px;
+      }
+    }
+  }
+  .form-phone-number {
+    width: calc(100% - 108px);
+  }
+}
 </style>

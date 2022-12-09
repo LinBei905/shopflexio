@@ -53,13 +53,20 @@
               </p>
               <div class="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
                 <div>
-                  <a
+                  <div
                     class="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0"
-                    href="https://ap.shopflex.io/account/login"
-                    target="_blank"
-                    >Start free trial</a
+                    style="cursor: pointer;"
+                    href="/book"
+                    @click="dialogVisible = true"
+                    >Book a Demo</div
                   >
-                </div>
+                </div>       
+                <el-dialog
+                  title=""
+                  :visible.sync="dialogVisible"
+                  width="45%">
+                  <Book />
+                </el-dialog>
                 <!-- <div>
                   <a
                     class="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4"
@@ -156,10 +163,15 @@ import { computed, defineComponent, ref } from '@nuxtjs/composition-api'
 
 import { isClient } from '~/shared'
 
+import Book from '../../pages/book.vue'
+
 // import { isMobile as _isMobile } from '~/shared'
 
 export default defineComponent({
   name: 'HeroHome',
+  components: {
+    Book
+  },
   setup() {
     const visible = ref(false)
     const handleClick = () => {
@@ -172,8 +184,8 @@ export default defineComponent({
       return window.screen.width < 600 ? '92%' : null
     })
 
-    return { visible, dialogWidth, handleClick }
-  },
+    return { visible, dialogWidth, handleClick, dialogVisible: false }
+  }
 })
 </script>
 

@@ -1,14 +1,16 @@
 <template>
   <header
     class="fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out"
-    :class="isSticky ? 'bg-white backdrop-blur-sm shadow-lg' : ''"
+    
   >
-    <div class="max-w-6xl mx-auto px-4 lg:px-0">
+    <div
+      class="max-w-6xl mx-auto px-4 lg:px-0 bg-white mt-4"
+      style="padding-left: 20px; padding-right: 20px; border-radius: 6px; box-shadow: 0 2px 10px rgb(43 46 50 / 10%)">
       <div class="flex items-center justify-between h-16 md:h-20">
         <!-- {/* Site branding */} -->
         <div class="flex-shrink-0 mr-4">
           <!-- {/* Logo */} -->
-          <nuxt-link to="/" class="font-bold flex" style="font-size: 30px;" aria-label="Cruip">
+          <nuxt-link to="/" class="font-bold flex" style="font-size: 24px;" aria-label="Cruip">
             <span>
               Shop
             </span>
@@ -38,26 +40,27 @@
             </svg> -->
           </nuxt-link>
         </div>
+        <nuxt-link
+          to="/blogs"
+          class="bg-gray-200 py-2 px-8 mt-1 font-medium flex items-center transition duration-150 ease-in-out"
+          style="border-radius: 8px;"
+        >
+          Blog
+        </nuxt-link>
 
         <!-- {/* Site navigation */} -->
         <nav class="flex flex-grow">
           <ul class="flex flex-grow justify-end flex-wrap items-center">
             <li>
-              <nuxt-link
-                to="/blogs"
-                class="font-medium text-gray-900 hover:text-primary px-5 py-3 flex items-center transition duration-150 ease-in-out"
-              >
-                Blogs
-              </nuxt-link>
             </li>
-            <li>
+            <!-- <li>
               <nuxt-link
                 to="/book"
                 class="font-medium text-gray-900 hover:text-primary px-5 py-3 flex items-center transition duration-150 ease-in-out"
               >
                 Book a Demo
               </nuxt-link>
-            </li>
+            </li> -->
             <!-- <li>
               <a
                 href="https://shopflex.io/blogs"
@@ -100,6 +103,7 @@ export default defineComponent({
   setup() {
     return {
       scrollY: 0,
+      color: ''
     }
   },
   computed: {
@@ -123,4 +127,8 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.header-btns:hover {
+  background-color: #ededed
+}
+</style>

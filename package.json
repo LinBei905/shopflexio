@@ -31,6 +31,8 @@
     ]
   },
   "dependencies": {
+    "base-64": "^1.0.0",
+    "markdown-it": "^13.0.1",
     "pnpm": "^7.18.1"
   }
 }
