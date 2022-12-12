@@ -40,13 +40,13 @@
             </svg> -->
           </nuxt-link>
         </div>
-        <nuxt-link
+        <!-- <nuxt-link
           to="/blogs"
           class="bg-gray-200 py-2 px-8 mt-1 font-medium flex items-center transition duration-150 ease-in-out"
           style="border-radius: 8px;"
         >
           Blog
-        </nuxt-link>
+        </nuxt-link> -->
 
         <!-- {/* Site navigation */} -->
         <nav class="flex flex-grow">
