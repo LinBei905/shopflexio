@@ -6,9 +6,11 @@
   "scripts": {
     "prepare": "husky install",
     "release": "standard-version",
+    "generate": "nuxt generate",
     "dev": "cd packages/client && pnpm dev",
     "start": "set cd packages/client && pnpm start",
-    "build": "cd packages/client && pnpm build"
+    "build": "cd packages/client && pnpm build",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "keywords": [],
   "author": "",
