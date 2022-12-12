@@ -56,6 +56,7 @@ const nuxtConfig: NuxtConfig = {
     '@nuxtjs/svg',
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/dotenv',
   ],
   router: {
     base: '/',

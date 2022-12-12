@@ -7,7 +7,7 @@
     "prepare": "husky install",
     "release": "standard-version",
     "dev": "cd packages/client && pnpm dev",
-    "start": "cd packages/client && pnpm start",
+    "start": "set cd packages/client && pnpm start",
     "build": "cd packages/client && pnpm build"
   },
   "keywords": [],
@@ -31,8 +31,9 @@
     ]
   },
   "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@tinymce/tinymce-vue": "^3.2.8",
     "base-64": "^1.0.0",
-    "markdown-it": "^13.0.1",
     "pnpm": "^7.18.1"
   }
 }
