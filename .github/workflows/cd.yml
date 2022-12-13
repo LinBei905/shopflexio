@@ -9,6 +9,8 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
+        pnpm:
+          - 7.18.1
         node: [14]
 
     steps:
@@ -19,9 +21,12 @@ jobs:
         uses: actions/setup-node@v2.1.2
         with:
           node-version: ${{ matrix.node }}
-
+          
+      - name: 'Test: which'
+        run: which pnpm
+        
       - name: Install dependencies
-        run: npm install pnpm && pnpm install
+        run: pnpm install
 
       - name: Generate
         run: cd packages/client && npm run generate && npm run deploy
