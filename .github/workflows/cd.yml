@@ -21,9 +21,6 @@ jobs:
         uses: actions/setup-node@v2.1.2
         with:
           node-version: ${{ matrix.node }}
-          
-      - name: 'Test: which'
-        run: which pnpm
         
       - name: Install dependencies
         run: pnpm install
