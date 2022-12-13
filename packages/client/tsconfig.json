@@ -26,7 +26,9 @@
     "types": [
       "node",
       "@nuxtjs/i18n",
-      "unplugin-vue2-script-setup/types"
+      "unplugin-vue2-script-setup/types",
+      "@nuxt/types",
+      "@nuxt/content"
     ]
   },
   // "include": [

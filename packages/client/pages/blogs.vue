@@ -37,11 +37,19 @@ import { getBlogData } from '~/api'
 export default defineComponent({
   name: 'Blogs',
   setup() {
+    const getBlogs = () => {
+      const blog1 = require('../static/blogs/blog1.json')
+      const blog2 = require('../static/blogs/blog2.json')
+      const allBlogs = [blog1.data, blog2.data]
+      return allBlogs
+    }
     const blogData = useAsync(() => {
       return getBlogData()
     })
     const list = computed(() => {
-      const res = blogData.value?.list || []
+      const res = getBlogs()
+      console.log(res)
+      // const res = blogData.value?.list || []
       return res.sort((a, b) => {
         if (a.order == b.order) {
           return a.updated_time - b.updated_time
@@ -52,7 +60,7 @@ export default defineComponent({
     })
     const formattedList = computed(() => list.value.filter((b) => b.published))
 
-    return { blogData, list, formattedList }
+    return { blogData, list, formattedList, getBlogs }
   },
 })
 </script>

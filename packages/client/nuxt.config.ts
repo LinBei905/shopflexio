@@ -62,7 +62,7 @@ const nuxtConfig: NuxtConfig = {
     base: '/',
   },
   /** Nuxt.js modules */
-  modules: ['@nuxtjs/i18n'],
+  modules: ['@nuxtjs/i18n', '@nuxt/content'],
   i18n: {
     locales: [
       {
