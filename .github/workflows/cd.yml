@@ -1,122 +1,27 @@
-name: Test Action
+name: cd
 
-on:
-  - push
-  - pull_request
-  - workflow_dispatch
+on: [push, pull_request]
 
 jobs:
-  test_default_inputs:
-    name: Test with default inputs
-
+  cd:
     runs-on: ${{ matrix.os }}
 
     strategy:
-      fail-fast: false
       matrix:
-        pnpm:
-          - 7.18.1
-        os:
-          - ubuntu-latest
-          - macos-latest
-          - windows-latest
+        os: [ubuntu-latest]
+        node: [14]
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@master
 
-      - name: Run the action
-        uses: ./
+      - name: Setup node env
+        uses: actions/setup-node@v2.1.2
         with:
-          version: 7.18.1
+          node-version: ${{ matrix.node }}
 
-      - name: 'Test: which'
-        run: which pnpm; which pnpx
+      - name: Install dependencies
+        run: npm install pnpm && pnpm install
 
-      - name: 'Test: install'
-        run: cd packages/client && pnpm install
-
-  test_explicit_inputs:
-    name: Test with explicit inputs
-
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      fail-fast: false
-      matrix:
-        pnpm:
-          - 7.18.1
-        os:
-          - ubuntu-latest
-          - macos-latest
-          - windows-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Run the action
-        uses: ./
-        with:
-          version: 7.18.1
-          dest: ~/test/pnpm
-
-      - name: 'Test: which'
-        run: which pnpm && which pnpx
-
-      - name: 'Test: install'
-        run: cd packages/client && pnpm install
-
-  test_run_install:
-    name: 'Test with run_install (${{ matrix.run_install.name }}, ${{ matrix.os }})'
-
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      fail-fast: false
-      matrix:
-        pnpm:
-          - 7.18.1
-        os:
-          - ubuntu-latest
-          - macos-latest
-          - windows-latest
-        run_install:
-          - name: 'null'
-            value: 'null'
-          - name: 'empty object'
-            value: '{}'
-          - name: 'recursive'
-            value: |
-              recursive: true
-          - name: 'global'
-            value: |
-              args:
-                - --global
-                - --global-dir=./pnpm-global
-                - npm
-                - yarn
-                - pnpm
-          - name: 'array'
-            value: |
-              - {}
-              - recursive: true
-              - args:
-                - --global
-                - --global-dir=./pnpm-global
-                - npm
-                - yarn
-                - pnpm
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Run the action
-        uses: ./
-        with:
-          version: 7.18.1
-          run_install: ${{ matrix.run_install.value }}
-
-      - name: 'Test: which'
-        run: which pnpm; which pnpx
-
-      - name: 'Test: install'
-        run: cd packages/client && pnpm install
+      - name: Generate
+        run: cd packages/client && npm run generate && npm run deploy
