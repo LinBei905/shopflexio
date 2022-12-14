@@ -33,6 +33,7 @@
     ]
   },
   "dependencies": {
+    "@nuxt/content": "^1.15.1",
     "@nuxtjs/dotenv": "^1.4.1",
     "@tinymce/tinymce-vue": "^3.2.8",
     "base-64": "^1.0.0",
