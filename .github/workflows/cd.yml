@@ -14,12 +14,21 @@ jobs:
         node: [14]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       
       - name: Reconfigure git to use HTTP authentication
         run: >
           git config --global url."https://github.com/".insteadOf
           ssh://git@github.com/
+          
+      - name: Setup SSH Keys and known_hosts
+        env:
+            SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        run: |
+            mkdir -p ~/.ssh
+            ssh-keyscan github.com >> ~/.ssh/known_hosts
+            ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+            ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
