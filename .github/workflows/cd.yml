@@ -16,6 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
+      - name: Reconfigure git to use HTTP authentication
+        run: >
+          git config --global url."https://github.com/".insteadOf
+          ssh://git@github.com/
+          
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         id: pnpm-install
@@ -26,11 +31,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
         
-      - name: Reconfigure git to use HTTP authentication
-        run: >
-          git config --global url."https://github.com/".insteadOf
-          ssh://git@github.com/
-          
       - name: Setup node env
         uses: actions/setup-node@v2.1.2
         with:
