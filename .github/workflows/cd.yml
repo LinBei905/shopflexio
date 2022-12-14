@@ -35,7 +35,7 @@ jobs:
         run: pnpm install
 
       - name: Generate
-        run: cd packages/client && npm run generate && npm run build
+        run: cd packages/client && npm run generate
         
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
