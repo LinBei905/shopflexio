@@ -2,7 +2,7 @@
   <div class="default-layout">
     <TheHeader />
 
-    <main class="pt-20" style="min-height: calc(100vh - 80px);">
+    <main style="min-height: calc(100vh - 80px);">
       <nuxt />
     </main>
 

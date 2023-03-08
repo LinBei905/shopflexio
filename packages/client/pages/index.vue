@@ -10,10 +10,20 @@
         class="absolute left-0 right-0 m-auto w-px p-px h-20 bg-gray-200 transform -translate-y-1/2"
       ></div> -->
     <!-- <FeaturesHome /> -->
-    <HeroHome />
-    <FeaturesBlocks />
-    <Testimonial />
-    <CustomersBlock />
+    <div class="w-full bg-overview-background bg-cover">
+      <Overview id="Overview" />
+      <!-- <HeroHome /> -->
+      <Features id="Features" />
+    </div>
+    <div class="w-full midBg">
+      <Testimonial />
+      <FeaturesBlocks id="Use Cases" />
+      <CustomersBlock id="Customers" />
+      <Prices id="Pricing" />
+      <div class="w-full bg-bottom-background bg-cover mb-28">
+        <GetStart id="GetStart" />
+      </div>
+    </div>
     <!-- <Newsletter /> -->
     <!-- </main> -->
     <!-- <TheFooter /> -->
@@ -25,20 +35,24 @@ import { defineComponent } from '@nuxtjs/composition-api'
 
 import CustomersBlock from '../components/home/customers-block.vue'
 import FeaturesBlocks from '../components/home/feature-blocks.vue'
-// import TheFooter from '../components/home/footer.vue'
-// import TheHeader from '../components/home/header.vue'
+import Features from '../components/home/features.vue'
+import GetStart from '../components/home/get-start.vue'
 import HeroHome from '../components/home/hero-home.vue'
+import Overview from '../components/home/overview.vue'
+import Prices from '../components/home/prices.vue'
 import Testimonial from '../components/home/testimonial.vue'
 
 export default defineComponent({
   name: 'Index',
   components: {
-    // TheHeader,
-    HeroHome,
+    // HeroHome,
     CustomersBlock,
     FeaturesBlocks,
     Testimonial,
-    // TheFooter,
+    Overview,
+    GetStart,
+    Features,
+    Prices
   },
   setup() {
     return {}
@@ -46,4 +60,9 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.midBg {
+  background: linear-gradient(to bottom, #eff2fb, #ffffff),
+    linear-gradient(to bottom, #ffffff, #eef1fc);
+}
+</style>

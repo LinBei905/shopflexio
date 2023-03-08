@@ -1,19 +1,16 @@
 <template>
   <div class="feature-blocks">
-    <section class="relative">
+    <section class="relative max-w-6xl mx-auto mt-12">
       <!-- {/* Section background (needs .relative class on parent and next sibling elements) */} -->
       <!-- <div
         class="absolute left-0 right-0 bottom-0 m-auto w-px p-px h-20 bg-gray-200 transform translate-y-1/2"
       ></div> -->
 
-      <div class="relative mx-auto px-4 sm:px-6">
-        <div class="pm-12 md:pm-20">
+      <div class="relative">
+        <div class="pm-12">
           <!-- {/* Section header */} -->
-          <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 id="use-cases" class="h2 mb-4">Use Cases</h2>
-            <p class="text-xl text-gray-600">
-              Start automating a task instantly with pre-made templates
-            </p>
+          <div class="mb-4 mx-2">
+            <h2 id="use-cases" class="h2 sectionTitle">Use Cases</h2>
           </div>
 
           <!-- {/* Items */} -->
