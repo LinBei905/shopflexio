@@ -20,7 +20,7 @@
               <button class="btn rounded-full px-5 py-2 border-solid border-primary border-2">
                 <span style="color: rgba(60, 110, 239, 1);">
                   Try for
-                </span><span class="text-success">free</span>
+                </span><span class="pl-2 text-success">free</span>
               </button>
             </a>
           </div>
@@ -30,7 +30,7 @@
         </div>
         <iframe src="https://www.youtube.com/embed/U8kfxJV6qg0" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-          class="" style="width:480px;height: 303px;"></iframe>
+          class="" style="width:550px;height: 303px;"></iframe>
         <!-- <video src="https://www.youtube.com/@shopflex-automizeyouronlin1967" width='420' height='303'></video> -->
         <!-- <el-image class="right" style="width: 420px; height: 303px;" src="/banner.png" alt="Hero" /> -->
       </div>
@@ -43,8 +43,8 @@
                 fill="#5C6C8B" />
             </svg>
           </div>
-          <h2 class="text-3xl">10Hrs</h2>
-          <p>Less Workload</p>
+          <h2 class="text-3xl">50%</h2>
+          <p>Less Complaints</p>
         </div>
         <div class="iconbox rounded-2xl bg-white bg-opacity-40 mx-1 text-center py-2">
           <div style="height: 145px;padding-top: 47px;">

@@ -101,7 +101,8 @@ import { defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
   name: 'Header',
   setup() {
-    const links = ['Overview', 'Features', 'Use Cases', 'Customers', 'Pricing', 'Blog']
+    // const links = ['Overview', 'Features', 'Use Cases', 'Customers', 'Pricing', 'Blog']
+    const links = ['Overview', 'Features', 'Use Cases', 'Customers', 'Pricing']
     return {
       scrollY: 0,
       color: '',

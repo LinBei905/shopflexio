@@ -1,8 +1,8 @@
 <template>
   <div class="w-full overflow-hidden">
     <h2 class="h2 max-w-6xl m-auto mb-16 sectionTitle">Pricing</h2>
-    <div class="content flex  mb-16 " :style="offset">
-      <div v-for="{ id, title, price, subTitle, conditions } in options" class="priceBox mr-6"
+    <div class="flex mb-16 max-w-6xl m-auto justify-between">
+      <div v-for="{ id, title, price, subTitle, conditions } in options" class="priceBox w-12/3"
         :class="{ 'selectedPrice': id == index }" :key="id" @click="index = id
         ">
         <p class="title">{{ title }}</p>
@@ -112,14 +112,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.content {
-  width: 1600px;
-  transition: 0.5s margin-left;
-}
-
 .priceBox {
-  height: 828px;
-  width: 380px;
+  flex-basis: 280px;
+  height: 700px;
   background: #EFF4FF;
   border: 3px solid #61CC81;
   box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.6), 4px 4px 4px rgba(0, 0, 0, 0.1);
@@ -128,36 +123,35 @@ export default {
   color: #5C6C8B;
   text-align: center;
   font-family: 'Apple SD Gothic Neo';
-  padding-top: 68px;
+  padding-top: 40px;
   border: 0px solid #61CC81;
   box-sizing: border-box;
-  margin-right: 20px;
 
   .title {
     font-weight: 700;
-    font-size: 32px;
+    font-size: 26px;
     line-height: 58px;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
 
   .subtitle {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
-    height: 109px;
+    height: 90px;
     width: 216px;
     display: inline-block;
   }
 
   .month {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
   }
 
   .price {
     font-weight: 700;
-    font-size: 60px;
+    font-size: 42px;
     line-height: 96px;
     margin-bottom: 19px;
   }
@@ -165,18 +159,18 @@ export default {
   .btn {
     background: #3C6EEF;
     border-radius: 50px;
-    width: 179px;
-    height: 50px;
+    width: 150px;
+    height: 45px;
     color: white;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .conditions {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 180%;
-    padding-left: 90px;
-    height: 270px;
+    padding-left: 50px;
+    height: 200px;
   }
 }
 

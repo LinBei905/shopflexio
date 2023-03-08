@@ -63,7 +63,8 @@
 <script>
 export default {
   data() {
-    const links = ['Overview', 'Features', 'Use Cases', 'Customers', 'Pricing', 'Blog']
+    // const links = ['Overview', 'Features', 'Use Cases', 'Customers', 'Pricing', 'Blog']
+    const links = ['Overview', 'Features', 'Use Cases', 'Customers', 'Pricing']
     return {
       links
     }

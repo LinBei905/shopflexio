@@ -2,7 +2,7 @@
   <div class="w-full pt-16 pb-8">
     <div class="max-w-6xl m-auto">
       <h2 class="h2 title pb-8 sectionTitle">Features</h2>
-      <h4 class="h4 title pb-8">How it works?</h4>
+      <h4 class="h4 pb-8">How it works?</h4>
       <div class="flex justify-between px-2 pb-12">
         <div class="text-center" style="width: 280px;">
           <h4 class="h4 title pb-8">Set up trigger</h4>
