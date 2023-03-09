@@ -7,7 +7,8 @@
             <dd v-for="link in links" :key="link" class="pr-5 pb-5"><a :href="`#${link}`">{{ link }}</a></dd>
           </dl>
           <a href="https://ap.shopflex.io" target="_blank">
-            <p class="text-success text-xl flex items-center">Get it now<svg class="pl-3" width="30" height="20"
+            <p class="text-success text-xl flex items-center">Get it now<svg
+class="pl-3" width="30" height="20"
                 viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M12.5312 15.4375L11.1875 14.125L16.4375 8.875H0V7H16.4375L11.1562 1.71875L12.5 0.40625L20.0312 7.9375L12.5312 15.4375Z"
@@ -49,13 +50,16 @@
             </svg>
           </div>
           <p class="text-white text-sm leading-5">
-            Contact Us: <a href="https://www.shopflex.io/privacy_policy" class="underline" target="_blank">
-              support@shopflex.io
-              ShopFlex ©2023. Privacy Policy
-            </a>
+            Contact Us: support@shopflex.io
           </p>
         </div>
       </div>
+    </div>
+    <div class="bottom text-center text-white mt-10">
+      ShopFlex ©2023. 
+      <a href="https://www.shopflex.io/privacy_policy" class="" target="_blank">
+        <span class="ml-32">Privacy Policy</span>
+      </a>
     </div>
   </footer>
 </template>

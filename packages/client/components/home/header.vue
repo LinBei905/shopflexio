@@ -51,12 +51,13 @@
           Blog
         </nuxt-link> -->
         <div class="flex-grow text-lg">
-          <dl class="flex justify-around">
-            <dd v-for="link of links" :key="link" class="link">
+          <dl class="flex justify-around link">
+            <dd v-for="link of links" :key="link">
               <a :href="`#${link}`">
                 {{ link }}
               </a>
             </dd>
+            <dd class="text-primary pl-24"><a href="https://ap.shopflex.io/account/login" target="_blank">Login</a></dd>
           </dl>
         </div>
         <!-- {/* Site navigation */} -->
@@ -80,7 +81,7 @@
               </a>
             </li> -->
             <li class="">
-              <a class="btn-sm text-white ml-3 bg-success rounded-full" href="#GetStart">
+              <a class="btn-sm text-white ml-3 bg-success rounded-full" href="https://ap.shopflex.io/account/register">
                 <span>Get it now</span>
                 <svg class="w-3 h-3 fill-current text-white flex-shrink-0 ml-2 -mr-1" viewBox="0 0 12 12"
                   xmlns="http://www.w3.org/2000/svg">

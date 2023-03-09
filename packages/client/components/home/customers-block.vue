@@ -19,7 +19,7 @@
       </div>
 
       <div class="mx-auto px-4 sm:px-6">
-        <div class="py-12 md:py-20">
+        <div class="pt-6 md:pt-10">
           <!-- {/* Section header */} -->
           <div class="max-w-6xl mx-auto pb-8">
             <h2 class="h2 mb-4 sectionTitle">Customers & Reviews</h2>

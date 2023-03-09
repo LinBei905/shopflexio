@@ -1,24 +1,27 @@
 <template>
   <!--  overflow-x-hidden -->
-  <div class="bg-white overflow-x-hidden">
+  <div class="bg-white overflow-x-hidden pb-20">
     <div class="flex justify-between items-center mx-auto max-w-6xl pb-4">
       <div class="box flex items-center relative" @click="setIndex(0)">
         <img src="~/assets/images/recommendation1.png" alt="" srcset="">
-        <svg class="absolute bottom-0 left-0 right-0 m-auto" v-show="index == 0" width="161" height="5"
+        <svg
+v-show="index == 0" class="absolute bottom-0 left-0 right-0 m-auto" width="161" height="5"
           viewBox="0 0 161 5" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="161" height="5" rx="2.5" fill="#3C6EEF" />
         </svg>
       </div>
       <div class="box flex items-center relative" @click="setIndex(1)">
         <img src="~/assets/images/recommendation2.png" alt="" srcset="">
-        <svg class="absolute bottom-0 left-0 right-0 m-auto" v-show="index == 1" width="161" height="5"
+        <svg
+v-show="index == 1" class="absolute bottom-0 left-0 right-0 m-auto" width="161" height="5"
           viewBox="0 0 161 5" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="161" height="5" rx="2.5" fill="#3C6EEF" />
         </svg>
       </div>
       <div class="box flex items-center relative" @click="setIndex(2)">
         <img src="~/assets/images/recommendation3.png" alt="" srcset="">
-        <svg class="absolute bottom-0 left-0 right-0 m-auto" v-show="index == 2" width="161" height="5"
+        <svg
+v-show="index == 2" class="absolute bottom-0 left-0 right-0 m-auto" width="161" height="5"
           viewBox="0 0 161 5" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="161" height="5" rx="2.5" fill="#3C6EEF" />
         </svg>
@@ -88,10 +91,12 @@ export default {
 .box {
   height: 120px;
 }
+*:has(.content){
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FB 100%);
 
+}
 .content {
   transition: 0.5s all;
-
   &img+img {
     margin-right: 5px;
   }

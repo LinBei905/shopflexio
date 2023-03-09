@@ -20,7 +20,7 @@
       <FeaturesBlocks id="Use Cases" />
       <CustomersBlock id="Customers" />
       <Prices id="Pricing" />
-      <div class="w-full bg-bottom-background bg-cover mb-28">
+      <div class="w-full bg-bottom-background bg-cover">
         <GetStart id="GetStart" />
       </div>
     </div>
@@ -62,7 +62,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .midBg {
-  background: linear-gradient(to bottom, #eff2fb, #ffffff),
-    linear-gradient(to bottom, #ffffff, #eef1fc);
+  background: linear-gradient(#eff2fb 0%, #f8f9fb 60%, #f8f9fb 100%);
 }
 </style>

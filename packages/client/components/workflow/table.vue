@@ -6,12 +6,15 @@
         <div class="wrapper m-auto">
           <div class="w-full flex justify-between items-center mb-5">
             <p class="mx-2 text-2xl" style="color:#5C6C8B">Start automating a task instantly with pre-made templates</p>
-            <el-button type="primary" round @click="dialogVisible = true">Book a demo <span class="ml-16"><i
-                  class="el-icon-right"></i></span></el-button>
+            <el-button type="primary" round @click="dialogVisible = true">
+              <span class="text-lg px-4">Book a demo <i class="el-icon-right ml-12  text-xl font-bold"></i></span>
+                
+            </el-button>
           </div>
           <div class="mb-4">
             <span class="mx-2" style="color:#5C6C8B">Search by category</span>
-            <ElSelect v-if="hasTags" v-model="activeTag" clearable filterable size="medium"
+            <ElSelect
+v-if="hasTags" v-model="activeTag" clearable filterable size="medium"
               class="topSelect w-72 sm:w-auto rounded-lg" @change="handleChangeTag">
               <ElOption key="all" value="" label="All"></ElOption>
               <ElOption v-for="tag in tagsList" :key="tag.name" :value="tag.name" :label="tag.name">
@@ -21,13 +24,15 @@
             </ElSelect>
           </div>
           <transition-group tag="div" name="el-fade-in" class="vt-flex vt-flex-wrap justify-between">
-            <a v-for="item in workflowList" :key="item.id"
+            <a
+v-for="item in workflowList" :key="item.id"
               :href="'https://ap.shopflex.io/published-workflow/' + item.flowCode" target="_blank" class=" mb-2">
               <el-card class="workflow-item rounded-sm" body-style="height: 100%;" style="width: 280px;">
                 <div class="vt-h-full vt-flex-col">
 
                   <div class="apps vt-flex-ic-gap-2 mb-4">
-                    <div v-for="(app, index) in item.apps" :key="index"
+                    <div
+v-for="(app, index) in item.apps" :key="index"
                       class="rounded-full flex justify-center items-center w-9 h-9" style="border: 1px solid #eee;">
                       <img style="width: 20px; height: 20px;" :src="app.icon" />
                     </div>
@@ -50,7 +55,8 @@
         </div>
 
         <div class="mt-6" style="text-align: center;">
-          <ElPagination layout="total, prev, pager, next, sizes" :current-page="workflowListState.pageNum"
+          <ElPagination
+layout="total, prev, pager, next, sizes" :current-page="workflowListState.pageNum"
             :page-size="workflowListState.pageSize" :page-sizes="[12, 24, 36]" :total="workflowListState.total"
             :disabled="isLoading" @size-change="handleSizeChange" @current-change="handleCurrentChange" />
         </div>
@@ -163,6 +169,18 @@ export default defineComponent({
 
   .el-tag--small {
     border-radius: 24px;
+  }
+  .el-pagination > .btn-prev,.el-pager > li,.btn-next{
+    background: transparent;
+  }
+  .el-input__inner{
+    background: transparent;
+    border: 1px solid rgba(60, 110, 239, 1);
+    border-radius: 4px !important;
+    font-weight: bold;
+  }
+  .el-pagination__total{
+    font-weight: bold;
   }
 }
 

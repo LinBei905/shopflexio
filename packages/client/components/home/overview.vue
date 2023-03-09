@@ -3,20 +3,21 @@
   <div class=" pb-20 pt-40">
     <div class="max-w-6xl mx-auto">
       <div class="overview flex justify-between mt-16 mb-20">
-        <div class="left">
+        <div class="left pr-9">
           <h1 class="title font-extrabold leading-tighter tracking-tighter mb-4 sectionTitle">Automize Your
             Online Store</h1>
-          <p class="max-w-6xl  mb-8" style="line-height: 24px; font-size: 18px;">
+          <p class="mb-8" style="line-height: 24px; font-size: 18px;">
             ShopFlex Automation, is an e-commerce automation tool that enables you to automate
             tasks and processes within your store and across your apps. It is like Shopify Flow
             but more flexible, allowing you to customize the workflows that work best for you.
           </p>
           <div>
-            <button class="btn text-lg text-white rounded-full px-5 py-2 bg-primary mr-8 border-primary border-2"
-              @click="dialogVisible = true">
-              Book a demo
-            </button>
-            <a href="https://ap.shopflex.io" target="_blank" class="link">
+            <a href="https://calendly.com/shopflex/shopflex-demonstration" target="_blank" class="link">
+              <button class="btn text-white rounded-full px-5 py-2 bg-primary mr-8 border-primary border-2">
+                Book a demo
+              </button>
+            </a>
+            <a href=" https://ap.shopflex.io/register" target="_blank" class="link">
               <button class="btn rounded-full px-5 py-2 border-solid border-primary border-2">
                 <span style="color: rgba(60, 110, 239, 1);">
                   Try for
@@ -24,17 +25,19 @@
               </button>
             </a>
           </div>
-          <el-dialog title="" :visible.sync="dialogVisible" width="45%">
+          <!-- old book demo -->
+          <!-- <el-dialog title="" :visible.sync="dialogVisible" width="45%">
             <Book />
-          </el-dialog>
+          </el-dialog> -->
         </div>
-        <iframe src="https://www.youtube.com/embed/U8kfxJV6qg0" title="YouTube video player" frameborder="0"
+        <iframe
+src="https://www.youtube.com/embed/U8kfxJV6qg0" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
           class="" style="width:550px;height: 303px;"></iframe>
         <!-- <video src="https://www.youtube.com/@shopflex-automizeyouronlin1967" width='420' height='303'></video> -->
         <!-- <el-image class="right" style="width: 420px; height: 303px;" src="/banner.png" alt="Hero" /> -->
       </div>
-      <div class="flex justify-between">
+      <div class="flex justify-between font-bold">
         <div class="iconbox rounded-2xl bg-white bg-opacity-40 mx-1 text-center py-2">
           <div style="height: 145px;padding-top: 47px;">
             <svg class="m-auto" width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,12 +91,12 @@
 <script>
 import { computed, defineComponent, ref } from '@nuxtjs/composition-api'
 
-import Book from '../../pages/book.vue'
+// import Book from '../../pages/book.vue'
 
 export default defineComponent({
   name: 'Overview',
   components: {
-    Book
+    // Book
   },
   setup(_, context) {
     const visible = ref(false)
@@ -145,7 +148,12 @@ export default defineComponent({
 }
 
 .btn {
+  box-sizing: border-box;
   height: 50px;
-  width: 179px;
+  width: 180px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
 }
 </style>

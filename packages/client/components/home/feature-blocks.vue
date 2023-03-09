@@ -1,5 +1,5 @@
 <template>
-  <div class="feature-blocks">
+  <div class="feature-blocks pb-6 md:pb-10">
     <section class="relative max-w-6xl mx-auto mt-12">
       <!-- {/* Section background (needs .relative class on parent and next sibling elements) */} -->
       <!-- <div
@@ -7,7 +7,7 @@
       ></div> -->
 
       <div class="relative">
-        <div class="pm-12">
+        <div class="">
           <!-- {/* Section header */} -->
           <div class="mb-4 mx-2">
             <h2 id="use-cases" class="h2 sectionTitle">Use Cases</h2>

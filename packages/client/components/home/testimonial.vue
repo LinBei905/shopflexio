@@ -25,7 +25,7 @@
           <div class="left w-3/5 overflow-hidden">
             <Integrations />
           </div>
-          <div class="right w-1/3 flex items-center">
+          <div class="right w-1/3 py-12">
             <p class="text-xl" data-aos="zoom-y-out">
               ShopFlex is the trusted integration solution for unifying data between Shopify and
               your enterprise systems.

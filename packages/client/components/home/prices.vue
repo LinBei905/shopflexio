@@ -1,9 +1,10 @@
 <template>
-  <div class="w-full overflow-hidden">
+  <div class="w-full overflow-hidden pt-4">
     <h2 class="h2 max-w-6xl m-auto mb-16 sectionTitle">Pricing</h2>
     <div class="flex mb-16 max-w-6xl m-auto justify-between">
-      <div v-for="{ id, title, price, subTitle, conditions } in options" class="priceBox w-12/3"
-        :class="{ 'selectedPrice': id == index }" :key="id" @click="index = id
+      <div
+v-for="{ id, title, price, subTitle, conditions } in options" :key="id"
+        class="priceBox w-12/3" :class="{ 'selectedPrice': id == index }" @click="index = id
         ">
         <p class="title">{{ title }}</p>
         <p class="subtitle">{{ subTitle }}</p>
