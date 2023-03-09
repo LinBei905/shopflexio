@@ -1,67 +1,93 @@
 <template>
-  <footer
-    class="py-2 px-4 border-t-1 border-solid border-color-lightgray border-t max-w-6xl mx-auto"
-    style="border-color: #eee;"
-  >
-    <div class="flex items-center flex-col gap-2 sm:flex-row sm:justify-between">
-      <div class="left">
-        <p class="gray">
-          Contact Us:
-          <a class="underline" href="mailto:support@shopflex.io">
-            support@shopflex.io
+  <footer class="pt-2 px-4" style="background-color: #132447;">
+    <div class="max-w-6xl m-auto flex items-center mt-20">
+      <div class="flex-grow flex justify-between">
+        <div class="left w-2/5">
+          <dl class="flex text-white text-xl flex-wrap mb-12">
+            <dd v-for="link in links" :key="link" class="pr-5 pb-5"><a :href="`#${link}`">{{ link }}</a></dd>
+          </dl>
+          <a href="https://ap.shopflex.io" target="_blank">
+            <p class="text-success text-xl flex items-center">Get it now<svg
+class="pl-3" width="30" height="20"
+                viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.5312 15.4375L11.1875 14.125L16.4375 8.875H0V7H16.4375L11.1562 1.71875L12.5 0.40625L20.0312 7.9375L12.5312 15.4375Z"
+                  fill="#61CC81" />
+              </svg>
+            </p>
           </a>
-        </p>
-        <p class="gray">
-          <a class="gray link" href="https://www.shopflex.io/privacy_policy">
-            ShopFlex &copy;{{ currentYear }}. Privacy Policy
-          </a>
-        </p>
-      </div>
 
-      <div class="center flex items-center gap-2">
-        <!-- <a href="https://twitter.com/ShopFlexApp" target="_blank" title="Twitter">
-          <img class="social-icon" src="../../assets/icons/twitter.svg" alt="" width="25px" height="25px">
-        </a> -->
-        <a href="https://www.linkedin.com/company/shopflex/" target="_blank" title="LinkedIn">
-          <img class="social-icon" src="../../assets/icons/linkedin-fill.svg" alt="" width="25px" height="25px">
-        </a>
-        <a href="https://www.youtube.com/channel/UCbRav4l3M30l3p8hhBPz5VQ" target="_blank" title="Youtube">
-          <img class="social-icon" src="../../assets/icons/Youtube.svg" alt="" width="25px" height="25px">
-        </a>
+        </div>
+        <div class="right w-1/5">
+          <h3 class="h3 pb-12 font-bold">
+            <a class="flex" href="https://apps.shopify.com/shopflex" target="_blank">
+              <span class="text-white">
+                Shop
+              </span>
+              <span class="text-primary">
+                Flex
+              </span>
+            </a>
+          </h3>
+          <div class="w-full flex justify-between pb-12">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="30" fill="white" />
+              <path
+                d="M20.8037 15C20.3701 14.9997 19.9407 15.0848 19.5399 15.2505C19.1392 15.4161 18.775 15.6591 18.4682 15.9656C18.1614 16.272 17.918 16.6359 17.7519 17.0365C17.5858 17.437 17.5002 17.8664 17.5 18.3C17.5 20.125 18.9788 21.6375 20.8 21.6375C22.6238 21.6375 24.1037 20.125 24.1037 18.3025C24.1041 17.8689 24.019 17.4395 23.8533 17.0389C23.6876 16.6382 23.4446 16.2741 23.1381 15.9674C22.8316 15.6607 22.4677 15.4174 22.0672 15.2514C21.6666 15.0854 21.2373 15 20.8037 15ZM36.9187 23.75C34.145 23.75 32.5588 25.2 31.7963 26.6425H31.7162V24.1388H26.25V42.5H31.9462V33.4113C31.9462 31.0163 32.1263 28.7013 35.09 28.7013C38.0113 28.7013 38.0538 31.4325 38.0538 33.5625V42.5H43.75V32.415C43.75 27.48 42.6888 23.75 36.9187 23.75ZM17.9537 24.1375V42.5H23.6538V24.1375H17.9537Z"
+                fill="#132447" />
+            </svg>
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="30" fill="white" />
+              <path
+                d="M49.1584 20.3419C48.9266 19.5115 48.4846 18.7549 47.8749 18.1453C47.2653 17.5357 46.5088 17.0936 45.6784 16.8619C42.5617 16.0269 30.0184 16.0269 30.0184 16.0269C30.0184 16.0269 17.5067 16.0102 14.3584 16.8619C13.528 17.0936 12.7714 17.5357 12.1618 18.1453C11.5522 18.7549 11.1101 19.5115 10.8784 20.3419C10.2876 23.5327 9.99629 26.7718 10.0084 30.0169C9.99857 33.2497 10.2898 36.4764 10.8784 39.6552C11.1101 40.4856 11.5522 41.2422 12.1618 41.8518C12.7714 42.4614 13.528 42.9035 14.3584 43.1352C17.4717 43.9719 30.0184 43.9719 30.0184 43.9719C30.0184 43.9719 42.5284 43.9719 45.6784 43.1352C46.5088 42.9035 47.2653 42.4614 47.8749 41.8518C48.4846 41.2422 48.9266 40.4856 49.1584 39.6552C49.7346 36.4753 50.0136 33.2486 49.9917 30.0169C50.0159 26.773 49.7369 23.5339 49.1584 20.3419ZM26.015 36.0019V24.0135L36.455 30.0169L26.015 36.0019Z"
+                fill="#132447" />
+            </svg>
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="30" fill="white" />
+              <path
+                d="M50 17.6001C48.5005 18.2669 46.9095 18.7051 45.28 18.9001C46.9913 17.8739 48.2708 16.2602 48.88 14.3601C47.2664 15.3188 45.5011 15.9952 43.66 16.3601C42.5321 15.1664 41.0717 14.339 39.4681 13.9849C37.8644 13.6308 36.1914 13.7664 34.6657 14.374C33.14 14.9817 31.832 16.0335 30.9109 17.3932C29.9899 18.7529 29.4984 20.3578 29.5 22.0001C29.5027 22.6264 29.5766 23.2504 29.72 23.8601C26.4541 23.6942 23.2598 22.8427 20.3446 21.361C17.4295 19.8794 14.8589 17.8006 12.8 15.2601C12.0676 16.5097 11.6811 17.9317 11.68 19.3801C11.6437 20.7172 11.9432 22.042 12.5511 23.2334C13.1591 24.4249 14.056 25.4449 15.16 26.2001C13.8 26.1601 11.26 25.8001 11.26 25.1801V25.2801C11.3105 27.1831 12.0075 29.0122 13.2362 30.4663C14.4649 31.9204 16.1521 32.9127 18.02 33.2801C17.3689 33.4627 16.6962 33.5569 16.02 33.5601C15.5167 33.5619 15.0143 33.515 14.52 33.4201C15.0481 35.051 16.0718 36.4767 17.4484 37.4984C18.825 38.5201 20.486 39.087 22.2 39.1201C19.2981 41.4219 15.704 42.6763 12 42.6801C11.3316 42.6791 10.6638 42.6391 10 42.5601C13.7534 44.9683 18.1204 46.2458 22.58 46.2401C25.6577 46.272 28.7109 45.6907 31.5616 44.5301C34.4122 43.3695 37.0031 41.6527 39.1832 39.4801C41.3633 37.3074 43.0889 34.7224 44.2593 31.8757C45.4297 29.0291 46.0214 25.9779 46 22.9001V21.8401C47.5719 20.6725 48.9259 19.2372 50 17.6001Z"
+                fill="#132447" />
+            </svg>
+          </div>
+          <p class="text-white text-sm leading-5">
+            Contact Us: support@shopflex.io
+          </p>
+        </div>
       </div>
-
-      <div class="right flex items-center gap-2">
-        <img class="rounded-full" style="width: 24px; height: 24px;" src="/logo.png" />
-        <h4 class="font-semibold">Hope you get what you want here!</h4>
-      </div>
+    </div>
+    <div class="bottom text-center text-white mt-10">
+      ShopFlex ©2023. 
+      <a href="https://www.shopflex.io/privacy_policy" class="" target="_blank">
+        <span class="ml-32">Privacy Policy</span>
+      </a>
     </div>
   </footer>
 </template>
 
-<script setup lang="ts">
-const currentYear = new Date().getFullYear()
+<script>
+export default {
+  data() {
+    // const links = ['Overview', 'Features', 'Use Cases', 'Customers', 'Pricing', 'Blog']
+    const links = ['Overview', 'Features', 'Use Cases', 'Customers', 'Pricing']
+    return {
+      links
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">
 footer {
-  background: #fff;
-  color: black;
+  font-family: Apple SD Gothic Neo;
+  line-height: 34px;
+  letter-spacing: 0em;
+  height: 395px;
+  font-weight: 400;
 
-  p,
-  h4 {
-    margin-bottom: 0;
-  }
+  .left {}
 
-  .gray {
-    color: #909090;
-  }
-  .link {
-    &:hover {
-      color: var(--color-primary);
-    }
-  }
-  .social-icon:hover {
-    cursor: pointer;
+  .right {
+    width: 235px;
   }
 }
 </style>

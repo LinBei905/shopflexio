@@ -1,27 +1,30 @@
 <template>
-  <header
-    class="fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out"
-    
-  >
-    <div
-      class="max-w-6xl mx-auto px-4 lg:px-0 bg-white mt-4"
+  <header class="fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out">
+    <div class="max-w-6xl mx-auto px-4 lg:px-0 bg-white mt-4"
       style="padding-left: 20px; padding-right: 20px; border-radius: 6px; box-shadow: 0 2px 10px rgb(43 46 50 / 10%)">
       <div class="flex items-center justify-between h-16 md:h-20">
         <!-- {/* Site branding */} -->
         <div class="flex-shrink-0 mr-4">
-          <!-- {/* Logo */} -->
-          <nuxt-link to="/" class="font-bold flex" style="font-size: 24px;" aria-label="Cruip">
+          <!-- sub option -->
+          <a href="https://apps.shopify.com/shopflex" class="font-bold flex" style="font-size: 24px;" target="_blank">
             <span>
               Shop
             </span>
             <span class="text-primary">Flex</span>
-            <!-- <img
+          </a>
+          <!-- origin link -->
+          <!-- <nuxt-link to="/" class="font-bold flex" style="font-size: 24px;" aria-label="Cruip">
+            <span>
+              Shop
+            </span>
+            <span class="text-primary">Flex</span> -->
+          <!-- <img
               style="width: 32px; height: 32px;"
               class="rounded-full"
               src="/logo.png"
               alt="logo"
             /> -->
-            <!-- <svg class="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <!-- <svg class="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <radialGradient
                   id="header-logo"
@@ -38,7 +41,7 @@
               </defs>
               <rect width="32" height="32" rx="16" fill="url(#header-logo)" fillRule="nonzero" />
             </svg> -->
-          </nuxt-link>
+          <!-- </nuxt-link> -->
         </div>
         <!-- <nuxt-link
           to="/blogs"
@@ -47,12 +50,19 @@
         >
           Blog
         </nuxt-link> -->
-
+        <div class="flex-grow text-lg">
+          <dl class="flex justify-around link">
+            <dd v-for="link of links" :key="link">
+              <a :href="`#${link}`">
+                {{ link }}
+              </a>
+            </dd>
+            <dd class="text-primary pl-24"><a href="https://ap.shopflex.io/account/login" target="_blank">Login</a></dd>
+          </dl>
+        </div>
         <!-- {/* Site navigation */} -->
-        <nav class="flex flex-grow">
+        <nav class="flex">
           <ul class="flex flex-grow justify-end flex-wrap items-center">
-            <li>
-            </li>
             <!-- <li>
               <nuxt-link
                 to="/book"
@@ -70,22 +80,13 @@
                 <span>Blogs</span>
               </a>
             </li> -->
-            <li>
-              <a
-                href="https://ap.shopflex.io/account/login"
-                class="btn-sm text-white ml-3 bg-primary"
-                target="_blank"
-              >
-                <span>Try it for free</span>
-                <svg
-                  class="w-3 h-3 fill-current text-white flex-shrink-0 ml-2 -mr-1"
-                  viewBox="0 0 12 12"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"
-                    fillRule="nonzero"
-                  />
+            <li class="">
+              <a class="btn-sm text-white ml-3 bg-success rounded-full" href="https://ap.shopflex.io/account/register">
+                <span>Get it now</span>
+                <svg class="w-3 h-3 fill-current text-white flex-shrink-0 ml-2 -mr-1" viewBox="0 0 12 12"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"
+                    fillRule="nonzero" />
                 </svg>
               </a>
             </li>
@@ -101,9 +102,12 @@ import { defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
   name: 'Header',
   setup() {
+    // const links = ['Overview', 'Features', 'Use Cases', 'Customers', 'Pricing', 'Blog']
+    const links = ['Overview', 'Features', 'Use Cases', 'Customers', 'Pricing']
     return {
       scrollY: 0,
-      color: ''
+      color: '',
+      links
     }
   },
   computed: {
@@ -130,5 +134,14 @@ export default defineComponent({
 <style lang="scss" scoped>
 .header-btns:hover {
   background-color: #ededed
+}
+
+.link {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: rgba(19, 36, 71, 1);
+
 }
 </style>

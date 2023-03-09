@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white py-8">
+  <section class="py-8">
     <!-- <h1 class="w-full mt-2 mb-6 text-5xl font-bold leading-tight text-center text-gray-800">
       Integrations
     </h1> -->
@@ -14,7 +14,7 @@
           <div
             v-for="item in list"
             :key="item.id"
-            class="marquee__item gap-2 items-center mx-2 inline-flex py-4 px-6 mb-8"
+            class="marquee__item gap-2 items-center mx-2 inline-flex py-4 px-6 mb-8 bg-white"
           >
             <img :src="item.icon" style="width: 24px; height: 24px;" />
             <span>
@@ -100,7 +100,7 @@ export default {
   color: black;
 
   &__item {
-    background: #f4f4f5;
+    background: white;
     border-radius: 999px;
     &:hover {
       color: var(--vt-c-primary);

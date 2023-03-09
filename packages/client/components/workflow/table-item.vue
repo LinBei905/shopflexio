@@ -1,9 +1,6 @@
 <template>
   <ElCard shadow="hover" class="vt-wf-published-item" body-style="height: 100%">
     <div class="vt-h-full vt-flex-col">
-      <div class="item-name vt-text-overflow-2" style="height: 60px;">
-        {{ workflowName }}
-      </div>
 
       <div class="apps vt-flex-ic-gap-2">
         <VtTooltip v-for="(app, index) in apps" :key="index" :content="app.name">
@@ -11,6 +8,10 @@
             <VtIcon style="width: 20px; height: 20px;" :icon="app.icon" />
           </VtAvatar>
         </VtTooltip>
+      </div>
+
+      <div class="item-name vt-text-overflow-2" style="height: 60px;">
+        {{ workflowName }}
       </div>
 
       <div class="vt-flex-1">
@@ -76,6 +77,7 @@ export default defineComponent({
   height: 280px;
 
   text-align: left;
+
   .item-name {
     word-break: break-word;
     font-weight: 600;

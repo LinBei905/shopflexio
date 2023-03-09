@@ -10,8 +10,13 @@ const config = {
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'overview-background': "url('~/assets/images/overview-background.png')",
+        'bottom-background': "url('~/assets/images/bottom-background.png')",
+      },
       colors: {
         primary: 'var(--vt-c-primary)',
+        success: 'var(--vt-c-success)',
 
         gray: {
           100: '#FBFBFB',
@@ -99,24 +104,24 @@ const config = {
         normal: '1.5',
         relaxed: '1.625',
         loose: '2',
-        '3': '.75rem',
-        '4': '1rem',
-        '5': '1.2rem',
-        '6': '1.5rem',
-        '7': '1.75rem',
-        '8': '2rem',
-        '9': '2.25rem',
-        '10': '2.5rem',
+        3: '.75rem',
+        4: '1rem',
+        5: '1.2rem',
+        6: '1.5rem',
+        7: '1.75rem',
+        8: '2rem',
+        9: '2.25rem',
+        10: '2.5rem',
       },
       minWidth: {
-        '10': '2.5rem',
-        '48': '12rem',
+        10: '2.5rem',
+        48: '12rem',
       },
       opacity: {
-        '90': '0.9',
+        90: '0.9',
       },
       scale: {
-        '98': '.98',
+        98: '.98',
       },
       animation: {
         float: 'float 3s ease-in-out infinite',
