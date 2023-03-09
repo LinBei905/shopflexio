@@ -1,0 +1,13 @@
+{
+  "data": {
+    "id": 1,
+    "title": "title1",
+    "value": "11",
+    "tags": ["tag1", "tag2", "tag3"],
+    "order": "order",
+    "cover": "url",
+    "updated_time": "111",
+    "content": "content",
+    "published": true
+  }
+}
